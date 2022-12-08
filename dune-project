@@ -5,4 +5,5 @@
 (generate_opam_files)
 
 (package
- (name aoc2022))
+ (name aoc2022)
+ (depends ppx_jane base stdio))

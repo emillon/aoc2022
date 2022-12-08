@@ -2,6 +2,7 @@
  (name day01)
  (public_name aoc2022.day01)
  (modules day01)
+ (libraries base stdio)
  (preprocess
   (pps ppx_jane))
  (inline_tests))
