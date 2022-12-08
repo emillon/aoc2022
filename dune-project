@@ -2,8 +2,14 @@
 
 (name aoc2022)
 
+(source
+ (github emillon/aoc2022))
+
+(maintainers "Etienne Millon")
+
 (generate_opam_files)
 
 (package
  (name aoc2022)
+ (synopsis "Advent of code 2022")
  (depends ppx_jane base stdio))
