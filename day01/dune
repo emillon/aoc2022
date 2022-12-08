@@ -1,5 +1,6 @@
 (library
  (name day01)
+ (public_name aoc2022.day01)
  (modules day01)
  (preprocess
   (pps ppx_jane))
@@ -11,7 +12,7 @@
  (libraries day01))
 
 (rule
-  (write-file run.ml "let () = Day01.main ()"))
+ (write-file run.ml "let () = Day01.main ()"))
 
 (rule
  (with-stdout-to
