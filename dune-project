@@ -12,4 +12,9 @@
 (package
  (name aoc2022)
  (synopsis "Advent of code 2022")
- (depends ppx_jane base stdio))
+ (depends
+  (ocaml
+   (>= 4.14))
+  ppx_jane
+  base
+  stdio))

@@ -6,6 +6,7 @@ homepage: "https://github.com/emillon/aoc2022"
 bug-reports: "https://github.com/emillon/aoc2022/issues"
 depends: [
   "dune" {>= "3.6"}
+  "ocaml" {>= "4.14"}
   "ppx_jane"
   "base"
   "stdio"
