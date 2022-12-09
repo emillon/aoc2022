@@ -149,5 +149,6 @@ let run2 lines_s =
 let main () =
   match Sys.get_argv () with
   | [| _; p |] -> In_channel.with_file p ~f:In_channel.input_lines |> run
-  | [| _; "--2"; p |] -> In_channel.with_file p ~f:In_channel.input_lines |> run2
+  | [| _; "--2"; p |] ->
+      In_channel.with_file p ~f:In_channel.input_lines |> run2
   | _ -> assert false
