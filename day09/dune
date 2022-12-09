@@ -1,0 +1,36 @@
+(library
+ (name day09)
+ (public_name aoc2022.day09)
+ (modules day09)
+ (libraries base stdio re)
+ (preprocess
+  (pps ppx_jane))
+ (inline_tests))
+
+(executable
+ (name run)
+ (modules run)
+ (libraries day09))
+
+(rule
+ (write-file run.ml "let () = Day09.main ()"))
+
+(rule
+ (with-stdout-to
+  p1.out
+  (run ./run.exe %{dep:input.txt})))
+
+(rule
+ (with-stdout-to
+  p2.out
+  (run ./run.exe --2 %{dep:input.txt})))
+
+(rule
+ (alias runtest)
+ (action
+  (diff p1.expected p1.out)))
+
+(rule
+ (alias runtest)
+ (action
+  (diff p2.expected p2.out)))
