@@ -40,15 +40,15 @@ let run2 s = go s ~chunk_len:14
 
 let%expect_test "run2" =
   run2 "mjqjpqmgbljsphdztnvjfqwrcgsmlb";
-  [%expect{| 19 |}];
+  [%expect {| 19 |}];
   run2 "bvwbjplbgvbhsrlpgdmjqwftvncz";
-  [%expect{| 23 |}];
+  [%expect {| 23 |}];
   run2 "nppdvjthqldpwncqszvftbrmjlhg";
-  [%expect{| 23 |}];
+  [%expect {| 23 |}];
   run2 "nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg";
-  [%expect{| 29 |}];
+  [%expect {| 29 |}];
   run2 "zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw";
-  [%expect{| 26 |}]
+  [%expect {| 26 |}]
 
 let main () =
   match Sys.get_argv () with
