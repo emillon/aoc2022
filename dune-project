@@ -17,4 +17,5 @@
    (>= 4.14))
   ppx_jane
   base
-  stdio))
+  stdio
+  ocamlgraph))

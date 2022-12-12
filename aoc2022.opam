@@ -10,6 +10,7 @@ depends: [
   "ppx_jane"
   "base"
   "stdio"
+  "ocamlgraph"
   "odoc" {with-doc}
 ]
 build: [
