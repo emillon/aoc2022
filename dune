@@ -1,7 +1,8 @@
 (rule
  (mode promote)
  (alias runtest)
- (deps (glob_files **/*.expected))
+ (deps
+  (glob_files **/*.expected))
  (action
   (with-stdout-to
    README.md

@@ -1,0 +1,39 @@
+(library
+ (name day12)
+ (public_name aoc2022.day12)
+ (modules day12)
+ (libraries base stdio re ocamlgraph)
+ (preprocess
+  (pps ppx_jane))
+ (inline_tests))
+
+(executable
+ (name run)
+ (modules run)
+ (libraries day12))
+
+(rule
+ (write-file run.ml "let () = Day12.main ()"))
+
+(rule
+ (write-file day12.mli "val main : unit -> unit"))
+
+(rule
+ (with-stdout-to
+  p1.out
+  (run ./run.exe %{dep:input.txt})))
+
+(rule
+ (with-stdout-to
+  p2.out
+  (run ./run.exe --2 %{dep:input.txt})))
+
+(rule
+ (alias runtest)
+ (action
+  (diff p1.expected p1.out)))
+
+(rule
+ (alias runtest)
+ (action
+  (diff p2.expected p2.out)))
