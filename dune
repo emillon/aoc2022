@@ -1,0 +1,12 @@
+(rule
+ (mode promote)
+ (alias runtest)
+ (deps (glob_files **/*.expected))
+ (action
+  (with-stdout-to
+   README.md
+   (run ./readme.exe))))
+
+(executable
+ (name readme)
+ (libraries base stdio))
