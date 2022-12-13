@@ -28,4 +28,4 @@ build: [
   ]
 ]
 dev-repo: "git+https://github.com/emillon/aoc2022.git"
-available: [os = "linux"]
+available: [os = "linux" & arch != "arm32" & arch != "x86_32"]
