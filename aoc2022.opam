@@ -11,6 +11,7 @@ depends: [
   "base"
   "stdio"
   "ocamlgraph"
+  "angstrom"
   "odoc" {with-doc}
 ]
 build: [

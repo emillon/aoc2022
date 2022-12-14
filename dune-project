@@ -18,4 +18,5 @@
   ppx_jane
   base
   stdio
-  ocamlgraph))
+  ocamlgraph
+  angstrom))
