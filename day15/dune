@@ -1,0 +1,39 @@
+(library
+ (name day15)
+ (public_name aoc2022.day15)
+ (modules day15)
+ (libraries base stdio re angstrom diet)
+ (preprocess
+  (pps ppx_jane))
+ (inline_tests))
+
+(executable
+ (name run)
+ (modules run)
+ (libraries day15))
+
+(rule
+ (write-file run.ml "let () = Day15.main ()"))
+
+(rule
+ (write-file day15.mli "val main : unit -> unit"))
+
+(rule
+ (with-stdout-to
+  p1.out
+  (run ./run.exe %{dep:input.txt})))
+
+(rule
+ (with-stdout-to
+  p2.out
+  (run ./run.exe --2 %{dep:input.txt})))
+
+(rule
+ (alias runtest)
+ (action
+  (diff p1.expected p1.out)))
+
+(rule
+ (alias runtest)
+ (action
+  (diff p2.expected p2.out)))

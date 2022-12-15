@@ -19,4 +19,5 @@
   base
   stdio
   ocamlgraph
-  angstrom))
+  angstrom
+  diet))
