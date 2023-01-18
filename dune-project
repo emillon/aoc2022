@@ -16,8 +16,11 @@
   (ocaml
    (>= 4.14))
   ppx_jane
-  base
+  (base
+   (>= v0.15))
   stdio
   ocamlgraph
-  angstrom
-  diet))
+  (angstrom
+   (>= 0.15.0))
+  (diet
+   (>= 0.4))))
