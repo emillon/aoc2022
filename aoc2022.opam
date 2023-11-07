@@ -13,6 +13,7 @@ depends: [
   "ocamlgraph"
   "angstrom" {>= "0.15.0"}
   "diet" {>= "0.4"}
+  "re"
   "odoc" {with-doc}
 ]
 build: [
