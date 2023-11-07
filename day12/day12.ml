@@ -115,7 +115,7 @@ let run2 lines =
   |> List.map ~f:(fun start ->
          match D.shortest_path map start map.end_ with
          | _, n -> Some n
-         | exception Caml.Not_found -> None)
+         | exception Stdlib.Not_found -> None)
   |> List.filter_opt
   |> List.min_elt ~compare:Int.compare
   |> Option.value_exn |> Int.to_string |> print_endline

@@ -8,7 +8,7 @@ depends: [
   "dune" {>= "3.6"}
   "ocaml" {>= "4.14"}
   "ppx_jane"
-  "base" {>= "v0.15"}
+  "base" {>= "v0.16"}
   "stdio"
   "ocamlgraph"
   "angstrom" {>= "0.15.0"}

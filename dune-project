@@ -17,7 +17,7 @@
    (>= 4.14))
   ppx_jane
   (base
-   (>= v0.15))
+   (>= v0.16))
   stdio
   ocamlgraph
   (angstrom
